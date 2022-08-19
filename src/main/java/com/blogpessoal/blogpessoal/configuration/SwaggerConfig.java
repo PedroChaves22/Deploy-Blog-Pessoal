@@ -1,4 +1,4 @@
-package com.blogpessoal.configuration;
+package com.blogpessoal.blogpessoal.configuration;
 
 import org.springdoc.core.customizers.OpenApiCustomiser;
 import org.springframework.context.annotation.Bean;
@@ -14,24 +14,24 @@ import io.swagger.v3.oas.models.responses.ApiResponses;
 
 @Configuration
 public class SwaggerConfig {
-
+	
 	@Bean
 	public OpenAPI springBlogPessoalOpenAPI() {
 		return new OpenAPI()
 				.info(new Info()
-					.title("Projeto Blog Pessoal")
-					.description("Projeto Blog Pessoal - Generation Brasil")
-					.version("v0.0.1")
-				.license(new License()
-					.name("Generation Brasil")
-					.url("https://brazil.generation.org/"))
-				.contact(new Contact()
-					.name("Conteudo Generation")
-					.url("https://github.com/conteudoGeneration")
-					.email("conteudogeneration@gmail.com")))
-				.externalDocs(new ExternalDocumentation()
-					.description("Github")
-					.url("https://github.com/conteudoGeneration/"));
+						.title("Projeto Blog Pessoal")
+						.description("Projeto Blog Pessoal - Generation Brasil")
+						.version("v0.0.1")
+					.license(new License()
+						.name("generation.org.br")
+						.url("http://springdoc.org"))
+					.contact(new Contact()
+						.name("Pedro Chaves")
+						.url("https://github.com/PedroChaves22")
+						.email("pedrocsca@gmail.com")))
+					.externalDocs(new ExternalDocumentation()
+						.description("Github")
+						.url("https://github.com/PedroChaves22/Deploy-Blog-Pessoal.git"));
 	}
 
 	@Bean

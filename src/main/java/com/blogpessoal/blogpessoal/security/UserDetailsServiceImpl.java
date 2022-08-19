@@ -1,16 +1,20 @@
-package com.blogpessoal.security;
+package com.blogpessoal.blogpessoal.security;
 
 import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import
-org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import com.blogpessoal.model.Usuario;
-import com.blogpessoal.repository.UsuarioRepository;
+
+import com.blogpessoal.blogpessoal.model.Usuario;
+import com.blogpessoal.blogpessoal.repository.UsuarioRepository;
+
+
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
+
 	@Autowired
 	private UsuarioRepository userRepository;
 
@@ -24,8 +28,5 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 
 		return usuario.map(UserDetailsImpl::new).get();
-
 	}
-
-
 }
